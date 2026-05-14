@@ -7,9 +7,17 @@ window.QUIZ_LIST = [
         title:    "Đặc tính kiến trúc 1",
         desc:     "Khá dài",
         embedUrl: "https://wayground.com/embed/quiz/6a0597ac02de05c976633dba",
-        badge:    "New",
+        badge:    "Khó",
+      },
+      {
+        title:    "Đặc tính kiến trúc 1",
+        desc:     "Cũng vừa",
+        embedUrl: "https://wayground.com/embed/quiz/6a05c303214436046922c8f4",
+        badge:    "Trung bình",
       },
     ],
+
+    
   },
   {
     subject: "P4AIDS",
