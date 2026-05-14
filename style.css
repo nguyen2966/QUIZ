@@ -1,0 +1,248 @@
+:root {
+  --bg: #0d0d0f;
+  --surface: #16161a;
+  --border: #2a2a30;
+  --accent: #e8ff47;
+  --accent2: #47c8ff;
+  --text: #f0f0f0;
+  --muted: #888;
+  --radius: 14px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  padding: 64px 40px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  padding: 4px 14px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.header-sub {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.divider {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider hr {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.quiz-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  transition: border-color 0.25s, transform 0.25s;
+  animation: fadeUp 0.5s ease both;
+}
+
+.quiz-card:hover {
+  border-color: #444;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header {
+  padding: 24px 28px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-number {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card-title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.card-badge {
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
+.card-embed {
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-embed iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+.card-embed a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+  text-align: right;
+  border-top: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.card-embed a:hover {
+  color: var(--accent2);
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 32px 40px 48px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 40px 20px 28px;
+  }
+
+  .divider {
+    padding: 0 20px;
+  }
+
+  main {
+    padding: 0 20px 60px;
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
+
+  .card-embed {
+    min-height: 540px;
+  }
+}

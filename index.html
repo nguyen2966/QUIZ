@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+  <header>
+    <div class="header-tag">Quiz Hub</div>
+    <h1>Test your<br /><span>knowledge.</span></h1>
+    <p class="header-sub">A collection of interactive quizzes. Pick one below and get started.</p>
+  </header>
+
+  <div class="divider"><hr /></div>
+
+  <main>
+    <!-- Cards are injected here by render.js — do not edit manually -->
+    <div id="quiz-container"></div>
+  </main>
+
+  <footer>
+    <p>Built with Wayground &amp; hosted on Vercel.</p>
+  </footer>
+
+  <!-- quiz_list.js must load before render.js -->
+  <script src="./quiz_list.js"></script>
+  <script src="./render.js"></script>
+</body>
+</html>
