@@ -15,6 +15,35 @@ window.QUIZ_LIST = [
         embedUrl: "https://wayground.com/embed/quiz/6a05c303214436046922c8f4",
         badge:    "Trung bình",
       },
+      {
+        title:    "SOLID khó",
+        desc:     "Cũng vừa vừa thôi",
+        embedUrl: "https://wayground.com/embed/quiz/6a05c9cf404523e391d95746",
+        badge:    "Trung bình",
+      },
+      {
+        title:    "SOLID comprehension",
+        desc:     "Cũng vừa vừa thôi",
+        embedUrl: "https://wayground.com/embed/quiz/6a05cca2214436046922d698",
+        badge:    "Trung bình",
+      },
+       {
+        title:    "SOLID application",
+        desc:     "Cũng vừa vừa thôi",
+        embedUrl: "https://wayground.com/embed/quiz/6a05cda91ab5b3cd48a16801",
+        badge:    "Trung bình",
+      },
+      {
+        title:    "SOLID analysis",
+        desc:     "Cũng vừa vừa thôi",
+        embedUrl: "https://wayground.com/embed/quiz/6a05ce91404523e391d9624c",
+        badge:    "Trung bình",
+      },
+
+
+      
+      
+     
     ],
 
     
